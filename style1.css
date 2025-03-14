@@ -1,0 +1,318 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #d7e0ea;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .left {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center; /* Center navbar items */
+  width: 100%;
+  padding: 0;
+}
+
+
+nav ul li {
+  list-style: none;
+  margin: 0 15px;
+  /* margin-left: 150px; */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(86, 86, 215);
+}
+
+nav ul li a:hover {
+  color: rgb(66, 66, 87);
+}
+
+/* First Section */
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 90px 0;
+  /* flex-wrap: wrap; */
+}
+
+.firstSection>div {
+  width: 40%;
+}
+
+.color-gray {
+  color: rgb(98, 95, 95);
+}
+
+.leftSection {
+  font-size: 2rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding-left: 0 !important; /* Force remove left padding */
+}
+
+.passionate-text {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  gap: 10px;
+}
+
+#element {
+  color: rgb(149, 85, 181);
+  margin-left: 10px;
+}
+
+.download-box {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #272768;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  border: 2px solid white;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+}
+
+.download-box:hover {
+  background-color: rgb(99, 99, 220);
+  transform: scale(1.05);
+  border-color: rgb(99, 99, 220);
+}
+
+.rightSection img {
+  width: 70%;
+  border-radius: 8px;
+  margin-left: 40px;
+  filter: drop-shadow(10px 10px 15px black);
+  position: relative; /* Ensure it doesn't inherit z-index conflicts */
+  z-index: 1; /* Lower than the modal */
+}
+
+body.dark-mode .rightSection img {
+  filter: drop-shadow(10px 10px 15px white);
+}
+
+.purple {
+  color: rgb(140, 88, 187);
+}
+
+.text-gray {
+  color: gray;
+}
+
+main hr {
+  border: none;
+  background-color: #333;
+  height: 2px;
+  margin: 55px;
+}
+
+/* Second Section Styles */
+.secondSection {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.secondSection h1 {
+  margin-bottom: 30px;
+  margin-top: 18px ;
+  font-size: 2rem;
+  color: #333;
+}
+
+body.dark-mode .secondSection h1 {
+  color: #fff; /* Change text color to white */
+}
+
+.secondSection .box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.secondSection .vertical {
+  text-align: center;
+  max-width: 200px;
+}
+
+.secondSection .vertical img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.secondSection .vertical-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.secondSection .vertical-desc {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* Footer Styling */
+footer {
+  background-color: rgb(53, 44, 60);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; /* Stack items by default */
+  align-items: center; /* Center align text and links */
+  text-align: center;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 10px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: beige;
+  display: flex;
+  align-items: center;
+}
+
+.footer ul li a:hover {
+  color: rgb(99, 99, 220);
+}
+
+.footer-rights {
+  color: gray;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-first h3 {
+  font-size: 1.5rem; /* Responsive font size */
+  margin-bottom: 10px;
+  color: #ede7e7;
+}
+.footer-second {
+  display: flex;
+  flex-direction: row; /* Arrange items in a row */
+  justify-content: center; /* Center the links horizontally */
+  gap: 20px; /* Add space between the links */
+}
+.footer-second ul li {
+  margin: 0;
+}
+
+.footer-second a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.footer-second a:hover {
+  text-decoration: wavy;
+  /* Add hover effect */
+}
+
+.footer-second ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Align links horizontally */
+  flex-wrap: wrap; /* Wrap links on smaller screens */
+  justify-content: center;
+  gap: 15px; /* Spacing between links */
+}
+.footer-second ul li a {
+  text-decoration: none;
+  color: #0073e6;
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Align icon and text */
+  gap: 8px; /* Space between icon and text */
+}
+/* Social Icons */
+.social-icon {
+  height: 20px; /* Adjust size of icons */
+  width: auto;
+}
+
+.githubimg,
+.linkedinimg,
+.emailimg {
+  width: 24px;
+  /* Fixed width */
+  height: 24px;
+  /* Fixed height */
+  border-radius: 8px;
+  vertical-align: middle;
+  /* Align with text */
+  transition: transform 0.2s;
+  /* Smooth hover effect */
+}
+
+.githubimg:hover,
+.linkedinimg:hover,
+.emailimg:hover {
+  transform: scale(1.1);
+  /* Slight zoom effect on hover */
+}

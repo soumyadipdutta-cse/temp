@@ -1,0 +1,111 @@
+/* Default light mode styles */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #007bff;
+    --modal-background: rgba(0, 0, 0, 0.5);
+    --modal-content-background: #fff;
+    --modal-text-color: #000;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+    /* Smooth transition */
+  }
+  
+  a {
+    color: var(--link-color);
+  }
+  
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-background);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.4s ease; /* Fade-in and fade-out transition */
+  }
+  
+  .modal-content {
+    background-color: var(--modal-content-background);
+    color: var(--modal-text-color); /* Modal text color */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: left;
+    z-index: 1010; /* Ensure it's above the modal backdrop */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+  }
+  
+  /* Dark mode styles */
+  .dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --link-color: #bb86fc;
+    --modal-background: rgba(0, 0, 0, 0.7);
+    --modal-content-background: #333333;
+    --modal-text-color: #ffffff; /* White text color for modals in dark mode */
+  }
+  
+  /* Toggle Button Styling */
+  #theme-toggle {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  /* Ensure dark mode elements are still visible */
+  body.dark-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  #theme-toggle:hover {
+    background-color: #0056b3;
+  }
+
+  /* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #000;
+  }
+  
+  /* Fade-in and Fade-out animations */
+  .modal.fade-in {
+    opacity: 1;
+  }
+  
+  .modal.fade-out {
+    opacity: 0;
+  }
+  html {
+    scroll-behavior: smooth; /* Enables smooth scrolling globally */
+  }
+
+  

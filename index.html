@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Portfolio - Soumyadip</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="left">My Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="#" id="aboutLink">About</a></li>
+            <li><a href="#footer" id="links-link">Links & Projects</a></li>
+            <li><a href="#" id="contactLink">Contact Me</a></li>
+            <button id="theme-toggle">
+              <span id="theme-icon">🌙</span> Toggle Dark Mode
+            </button>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>About Us</h3>
+        <p>
+          Welcome to our website! We are dedicated to providing the best user
+          experience. Feel free to explore and learn more about what we do.
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Contact Me</h3>
+        <p>You can reach me via email at soumyadipdutta456@gmail.com</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          <span class="color-gray">Hi there, Welcome to my space...</span><br />
+          I am <span class="purple">Soumyadip Dutta</span>
+          <div class="passionate-text">
+            A passionate<span id="element"></span>
+          </div>
+          <a href="resume.pdf" download class="download-box">My Resume</a>
+        </div>
+        <div class="rightSection">
+          <img src="dev_img.png" alt="Developer Image" />
+        </div>
+      </section>
+      <hr />
+      <section class="secondSection">
+        <span class="text-black">What I have done so far.........</span>
+        <h1>Work Experience</h1>
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top" src="dev1.png" alt="Web Dev Icon" />
+            <div class="vertical-title">Web Developer (2023-2024)</div>
+            <div class="vertical-desc">Learned Frontend Web Development</div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="gdg.png" alt="GDG Icon" />
+            <div class="vertical-title">GDG PR (2024-2027)</div>
+            <div class="vertical-desc">
+              Joined as a public relations manager at GDG on campus Haldia
+              Institute of Technology
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="dev1.png" alt="Portfolio Icon" />
+            <div class="vertical-title">Portfolio Design (2024-2025)</div>
+            <div class="vertical-desc">
+              Designed a Portfolio Webpage using HTML, CSS, JS
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="ml.png" alt="ML Icon" />
+            <div class="vertical-title">Machine Learning(2025- )</div>
+            <div class="vertical-desc">Learning ML and AI....</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer">
+        <div class="footer-first">
+          <h3>Soumyadip's Developer Portfolio</h3>
+        </div>
+        <div class="footer-second">
+          <ul>
+            <li>
+              <a
+                href="https://linkedin.com/in/soumyadip-dutta-16a563253/"
+                target="_blank"
+              >
+                <img
+                  height="19"
+                  class="linkedinimg social-icon"
+                  src="linkedin-icon.png"
+                  alt="LinkedIn Icon"
+                />
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/soumyadipdutta-cse" target="_blank">
+                <img
+                  height="19"
+                  class="githubimg social-icon"
+                  src="github-icon.png"
+                  alt="GitHub Icon"
+                />
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="mailto:soumyadipdutta456@gmail.com">
+                <img
+                  height="19"
+                  class="emailimg social-icon"
+                  src="email-icon.png"
+                  alt="Email Icon"
+                />
+                Email
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-rights">
+        Copyright &#169; soumyadipdutta2025| All rights reserved
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer", "ML Enthusiast", "Coder."],
+        typeSpeed: 60,
+        backSpeed: 40,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
