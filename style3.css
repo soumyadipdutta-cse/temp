@@ -11,7 +11,6 @@ body {
     /* Prevents images from overflowing */
 }
 
-
 .passionate-text {
     display: flex;
     align-items: center;
@@ -24,12 +23,12 @@ body {
 
 #element {
     display: inline-block;
-    min-width: 180px;
-    /* Adjust based on the longest word */
+    min-width: fit-content; /* Allow text to expand */
+    max-width: 100%;
+    word-wrap: break-word; /* Allow words to break if needed */
+    overflow-wrap: break-word;
     text-align: left;
 }
-
-
 
 .nav-active {
     display: flex !important;
@@ -78,31 +77,21 @@ body {
     .passionate-text {
         display: flex;
         align-items: center;
-        font-size: 1.5rem;
-        /* Reduce font size slightly for smaller screens */
-        flex-wrap: wrap;
-        /* Allows text to wrap instead of cutting */
         justify-content: center;
+        flex-wrap: wrap; /* Allows the text to wrap properly */
         text-align: center;
+        font-size: 1.5rem; /* Adjust font size for small screens */
+        width: 100%;
     }
 
     #element {
         display: inline-block;
-        min-width: auto;
-        /* Remove fixed width */
-        max-width: 100%;
-        /* Ensure it doesn't overflow */
-        word-break: break-word;
-        /* Break words if needed */
+        width: auto; /* Ensures text fits dynamically */
+        max-width: 100%; /* Prevents overflow */
+        white-space: normal; /* Allows text to wrap properly */
         text-align: center;
     }
-
-
 }
-
-
-
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -289,10 +278,6 @@ body {
     }
 }
 
-
-
-
-
 /* Navbar Styling for Mobile */
 @media (max-width: 768px) {
     nav {
@@ -331,7 +316,6 @@ body {
     .nav-active {
         display: flex !important;
     }
-
 
     /* Hamburger Menu */
     .menu-icon {
